@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&B Engraver - Premium Stone & Leaf Engravings</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2><i class="fas fa-gem"></i> A&B Engraver</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Premium Stone & Leaf Engravings</h1>
+            <p>Beautifully crafted God & Goddess engravings on premium stones and leaves</p>
+            <a href="#products" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid">
+                
+                <!-- Product 1: Standard Stone -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578864208457-468d5d3ebef9?w=400&h=300&fit=crop" alt="Stone Engraving">
+                        <div class="product-overlay">
+                            <button class="order-btn" onclick="openOrderModal('stone')">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Stone Engraving</h3>
+                        <p>God/Goddess engraving on premium stone with luxury packaging</p>
+                        <div class="price">₹799</div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Customized Stone -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Custom Stone">
+                        <div class="product-overlay">
+                            <button class="order-btn" onclick="openOrderModal('custom-stone')">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Customized Stone Engraving</h3>
+                        <p>Your choice of design on premium stone with luxury packaging</p>
+                        <div class="price">₹849</div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Leaf Engraving -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop" alt="Leaf Engraving">
+                        <div class="product-overlay">
+                            <button class="order-btn" onclick="openOrderModal('leaf')">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Leaf Engraving</h3>
+                        <p>Beautiful engravings on natural leaves with premium packaging</p>
+                        <div class="price">₹599</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2 id="modalTitle">Place Your Order</h2>
+            <form id="orderForm">
+                <input type="hidden" id="productType" name="product">
+                
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="customerName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Complete Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>God/Goddess Name or Design</label>
+                    <input type="text" id="design" name="design" placeholder="e.g., Ganesh, Lakshmi, Custom Design">
+                </div>
+                
+                <div class="form-group">
+                    <label>Total Amount</label>
+                    <input type="text" id="totalAmount" name="amount" readonly>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fab fa-whatsapp"></i> Send Order to WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-gem"></i> A&B Engraver</h3>
+                    <p>Premium engravings that last a lifetime</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> 9867486495</p>
+                    <p><i class="fas fa-whatsapp"></i> WhatsApp Orders</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A&B Engraver. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
